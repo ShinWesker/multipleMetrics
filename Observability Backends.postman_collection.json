@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "22eafb58-3c7e-41b0-89df-25792cc15566",
+		"name": "Observability Backends",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32993728"
+	},
+	"item": [
+		{
+			"name": "up == 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/query?query=up%20%3D%3D%201",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"query"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "up%20%3D%3D%201"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(count(up == 1) == 6) - 5 or vector(0)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/query?query=%28count%28up%20%3D%3D%201%29%20%3D%3D%206%29%20-%205%20or%20vector%280%29\n\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"query"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "%28count%28up%20%3D%3D%201%29%20%3D%3D%206%29%20-%205%20or%20vector%280%29\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

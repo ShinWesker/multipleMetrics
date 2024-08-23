@@ -1,0 +1,70 @@
+version: '3'
+services:
+  a:
+    container_name: "Service-A"
+    build: .
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://tempo:4317"
+      OTEL_EXPORTER_ZIPKIN_ENDPOINT: "http://zipkin:9411/api/v2/spans"
+      OTEL_METRICS_EXPORTER_PROMETHEUS_PORT: 9090
+    ports:
+      - "8080:8080"
+    depends_on:
+      - tempo
+  b:
+    container_name: "Service-B"
+    build: ../B/.
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://tempo:4317"
+      OTEL_EXPORTER_ZIPKIN_ENDPOINT: "http://zipkin:9411/api/v2/spans"
+      OTEL_METRICS_EXPORTER_PROMETHEUS_PORT: 9090
+    ports:
+      - "8081:8081"
+    depends_on:
+      - tempo
+  c:
+    container_name: "Service-C"
+    build: ../C/.
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://tempo:4317"
+      OTEL_EXPORTER_ZIPKIN_ENDPOINT: "http://zipkin:9411/api/v2/spans"
+      OTEL_METRICS_EXPORTER_PROMETHEUS_PORT: 9090
+    ports:
+      - "8082:8082"
+    depends_on:
+      - tempo
+
+  tempo:
+    container_name: tempo
+    image: grafana/tempo:latest
+    command: [ "-config.file=/etc/tempo.yml" ]
+    volumes:
+      - ./docker/tempo/tempo.yml:/etc/tempo.yml
+    restart: always
+    ports:
+      - "4317"
+      - "3200"
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    volumes:
+      - ./docker/grafana/grafana-datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - tempo
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --enable-feature=exemplar-storage
+      - --web.enable-remote-write-receiver
+    restart: always
+    ports:
+      - '9090:9090'
