@@ -13,21 +13,18 @@ public class ErrorController {
     @GetMapping("/dms")
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public void triggerDmsError() {
-        // Logik oder Nachricht für den DMS Fehler (optional)
         throw new RuntimeException("DMS System error");
     }
 
     @GetMapping("/wws")
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public void triggerWwsError() {
-        // Logik oder Nachricht für den WWS Fehler (optional)
         throw new RuntimeException("WWS System error");
     }
 
     @GetMapping("/esb")
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public void triggerEsbError() {
-        // Logik oder Nachricht für den ESB Fehler (optional)
         throw new RuntimeException("ESB System error");
     }
 }
