@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "a1200b23-af8d-442a-8171-faf1bd3ae24f",
+		"name": "Error Thrower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32993728"
+	},
+	"item": [
+		{
+			"name": "DMS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/error/dms"
+			},
+			"response": []
+		},
+		{
+			"name": "DMS Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/error/dms"
+			},
+			"response": []
+		},
+		{
+			"name": "DMS Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/error/dms"
+			},
+			"response": []
+		},
+		{
+			"name": "ESB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/error/esb"
+			},
+			"response": []
+		},
+		{
+			"name": "ESB Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/error/esb"
+			},
+			"response": []
+		},
+		{
+			"name": "WWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/error/wws"
+			},
+			"response": []
+		}
+	]
+}

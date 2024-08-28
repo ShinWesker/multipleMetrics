@@ -59,6 +59,14 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Avg Error Endpunkt DMS",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
