@@ -13,6 +13,8 @@ execute the `docker-compose.yml` that is in `service A` with the command:
 Grafana:
 UI: `http://localhost:3000/`
 
+Dashboard to import: `blob-1724838055759.json`
+
 QueryEndpoint: `http://localhost:9090/api/v1/query?query=`
 
 #### Credentials:
