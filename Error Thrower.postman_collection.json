@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "a1200b23-af8d-442a-8171-faf1bd3ae24f",
+		"_postman_id": "65a9da22-90fe-4189-a5c8-f62f6b6c9c91",
 		"name": "Error Thrower",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "32993728"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -11,7 +10,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/api/error/dms"
+				"url": {
+					"raw": "http://localhost:8080/api/error/dms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"error",
+						"dms"
+					]
+				}
 			},
 			"response": []
 		},
@@ -20,7 +31,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/api/error/dms"
+				"url": {
+					"raw": "http://localhost:8080/api/error/dms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"error",
+						"dms"
+					]
+				}
 			},
 			"response": []
 		},
@@ -29,7 +52,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/api/error/dms"
+				"url": {
+					"raw": "http://localhost:8080/api/error/dms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"error",
+						"dms"
+					]
+				}
 			},
 			"response": []
 		},
@@ -38,7 +73,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/api/error/esb"
+				"url": {
+					"raw": "http://localhost:8080/api/error/esb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"error",
+						"esb"
+					]
+				}
 			},
 			"response": []
 		},
@@ -47,7 +94,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/api/error/esb"
+				"url": {
+					"raw": "http://localhost:8080/api/error/esb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"error",
+						"esb"
+					]
+				}
 			},
 			"response": []
 		},
@@ -56,7 +115,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/api/error/wws"
+				"url": {
+					"raw": "http://localhost:8080/api/error/wws",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"error",
+						"wws"
+					]
+				}
 			},
 			"response": []
 		}

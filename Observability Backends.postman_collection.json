@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "22eafb58-3c7e-41b0-89df-25792cc15566",
+		"_postman_id": "49aed7af-4af8-47db-99fe-9fabf842a59d",
 		"name": "Observability Backends",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "32993728"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -61,10 +60,29 @@
 			"response": []
 		},
 		{
-			"name": "Avg Error Endpunkt DMS",
+			"name": "Avg Error Endpunkt DMS ((sum(increase(http_server_requests_seconds_count{status=~\"5..\", uri=\"/api/error/wws\"}[30m])) < bool 100))",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/query?query=%28sum%28increase%28http_server_requests_seconds_count%7Bstatus%3D~%225..%22%2C%20uri%3D%22%2Fapi%2Ferror%2Fwws%22%7D%5B30m%5D%29%29%20%3C%20bool%20100%29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"query"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "%28sum%28increase%28http_server_requests_seconds_count%7Bstatus%3D~%225..%22%2C%20uri%3D%22%2Fapi%2Ferror%2Fwws%22%7D%5B30m%5D%29%29%20%3C%20bool%20100%29"
+						}
+					]
+				}
 			},
 			"response": []
 		}
